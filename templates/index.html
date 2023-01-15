@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Weather API</title>
+    <style>
+        .heading {
+            text-align: center;
+            padding-top: 50px;
+        }
+        .info {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="heading"> 
+        <h1>WEATHER API</h1>
+        <h2>Search for a city</h2>
+    </div>
+    <div class="info">
+            <form action="/" method="post">
+                <input type="text" name="cityName" width="60" />&nbsp;<input value="Search" type="submit" />
+            </form>
+        <p>You've searched for the city of: {{ cityName }}</p>
+        <p>The city is located in the country of: {{ countryName }}</p>
+        <p>The local time is : {{ localTime }}</p>
+        <p>The local temperature is: {{ temperature }} celcius</p>
+        <p>Local weather description: {{ weatherDesc}}</p>
+    </div>
+</body>
+</html>
